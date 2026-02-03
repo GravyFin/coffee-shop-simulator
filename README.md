@@ -5,10 +5,8 @@
 \## Overview
 
 This project is the practical component of my dissertation.
-
-It is developed using the Godot Engine and investigates:
-
-
+It will look at the requirements within the project and the
+tools used to create the project itself.
 
 \## Engine
 
