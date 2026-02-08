@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4u32pnj4o88y"]
+
+[ext_resource type="Script" uid="uid://deiinuokh5m54" path="res://scenes/start_game_button.gd" id="1_l6cm7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 536.0
+offset_bottom = 139.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Coffee Shop Simulator"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 6
+theme_override_constants/h_separation = 6
+theme_override_constants/icon_max_width = 6
+theme_override_constants/align_to_largest_stylebox = 6
+theme_override_constants/line_spacing = 6
+text = "Start Game!"
+autowrap_mode = 1
+icon_alignment = 1
+script = ExtResource("1_l6cm7")
