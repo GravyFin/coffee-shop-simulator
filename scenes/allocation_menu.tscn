@@ -1,7 +1,109 @@
-[gd_scene format=3 uid="uid://mr8oynd1ku2h"]
+[gd_scene load_steps=4 format=3 uid="uid://mr8oynd1ku2h"]
+
+[ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="1_21jpx"]
+[ext_resource type="Texture2D" uid="uid://cmj4qm7awdv85" path="res://assets/fire_icon.png" id="2_vo4r5"]
+[ext_resource type="Texture2D" uid="uid://06oe1fiigjg0" path="res://assets/smile_icon.png" id="3_32lxx"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Day+MoneyPanel" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 302.0
+offset_bottom = 189.0
+theme_override_constants/separation = 10
+
+[node name="DayPanel" type="PanelContainer" parent="Day+MoneyPanel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Day+MoneyPanel/DayPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="Day+MoneyPanel/DayPanel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Day: X"
+horizontal_alignment = 1
+
+[node name="MoneyPanel" type="PanelContainer" parent="Day+MoneyPanel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Day+MoneyPanel/MoneyPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="Day+MoneyPanel/MoneyPanel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Money: £10,000"
+horizontal_alignment = 1
+
+[node name="AssetPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 40.0
+offset_right = 1111.0
+offset_bottom = 230.0
+
+[node name="MarginContainer" type="MarginContainer" parent="AssetPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="AssetPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="QualityIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_21jpx")
+expand_mode = 2
+
+[node name="QualityLabel" type="Label" parent="AssetPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "4/5"
+
+[node name="PopIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_vo4r5")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="PopLabel" type="Label" parent="AssetPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Very Popular"
+
+[node name="StaffIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_32lxx")
+expand_mode = 2
+
+[node name="StaffLabel" type="Label" parent="AssetPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Very Happy"
