@@ -293,7 +293,7 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 26
 text = "+"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Options+EndButtons" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 813.00006
 offset_top = 310.0
@@ -305,18 +305,26 @@ theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Options+EndButtons"]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="Options+EndButtons/VBoxContainer"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 text = "Options"
 
-[node name="EndButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="EndButton" type="Button" parent="Options+EndButtons/VBoxContainer"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 text = "Next Day!"
+
+[connection signal="pressed" from="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer/AdvertValuePanel/MinusButton" to="." method="_on_ad_minus_pressed"]
+[connection signal="pressed" from="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer/AdvertValuePanel/PlusButton" to="." method="_on_ad_plus_pressed"]
+[connection signal="pressed" from="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel/MinusButton" to="." method="_on_eq_minus_pressed"]
+[connection signal="pressed" from="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel/PlusButton" to="." method="_on_eq_plus_pressed"]
+[connection signal="pressed" from="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel/MinusButton" to="." method="_on_sf_minus_pressed"]
+[connection signal="pressed" from="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel/PlusButton" to="." method="_on_sf_plus_pressed"]
+[connection signal="pressed" from="Options+EndButtons/VBoxContainer/EndButton" to="." method="_on_end_day_pressed"]

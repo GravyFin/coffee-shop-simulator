@@ -21,7 +21,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 46
 text = "Coffee Shop Simulator"
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="StartGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 6
@@ -33,3 +33,5 @@ text = "Start Game!"
 autowrap_mode = 1
 icon_alignment = 1
 script = ExtResource("1_l6cm7")
+
+[connection signal="pressed" from="VBoxContainer/StartGameButton" to="VBoxContainer/StartGameButton" method="_on_pressed"]

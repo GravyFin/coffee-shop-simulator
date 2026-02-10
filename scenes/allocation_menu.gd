@@ -1,6 +1,6 @@
 extends Control
 
-const STEP := 10
+const STEP := 50
 
 var ad_spend := 0
 var eq_spend := 0
