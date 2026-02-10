@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://mr8oynd1ku2h"]
+[gd_scene load_steps=8 format=3 uid="uid://mr8oynd1ku2h"]
 
+[ext_resource type="Script" uid="uid://idw3rm21lr54" path="res://scenes/allocation_menu.gd" id="1_3urfv"]
 [ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="1_21jpx"]
 [ext_resource type="Texture2D" uid="uid://cmj4qm7awdv85" path="res://assets/fire_icon.png" id="2_vo4r5"]
 [ext_resource type="Texture2D" uid="uid://06oe1fiigjg0" path="res://assets/smile_icon.png" id="3_32lxx"]
+[ext_resource type="Texture2D" uid="uid://do8ujuy3t0277" path="res://assets/megaphone_icon.png" id="4_vo4r5"]
+[ext_resource type="Texture2D" uid="uid://bgyk6lpoxsqle" path="res://assets/equipment_icon.png" id="5_32lxx"]
+[ext_resource type="Texture2D" uid="uid://dwlo5umwnetwj" path="res://assets/staff_icon.png" id="6_nxf4a"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_3urfv")
 
 [node name="Day+MoneyPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -27,10 +32,10 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Day+MoneyPanel/DayPanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Label" type="Label" parent="Day+MoneyPanel/DayPanel/MarginContainer"]
 layout_mode = 2
@@ -43,10 +48,10 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Day+MoneyPanel/MoneyPanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Label" type="Label" parent="Day+MoneyPanel/MoneyPanel/MarginContainer"]
 layout_mode = 2
@@ -107,3 +112,211 @@ expand_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Very Happy"
+
+[node name="OptionsPanel" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 294.0
+offset_right = 773.0
+offset_bottom = 604.0
+theme_override_constants/h_separation = 30
+columns = 3
+
+[node name="AdvertisingPanel" type="PanelContainer" parent="OptionsPanel"]
+custom_minimum_size = Vector2(225, 310)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPanel/AdvertisingPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/AdvertisingPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="AdvertIcon" type="TextureRect" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_vo4r5")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advertising"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AdvertValuePanel" type="HBoxContainer" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="MinusButton" type="Button" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer/AdvertValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="Denom" type="Label" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer/AdvertValuePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "£"
+
+[node name="PlusButton" type="Button" parent="OptionsPanel/AdvertisingPanel/MarginContainer/VBoxContainer/AdvertValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="EquipmentPanel" type="PanelContainer" parent="OptionsPanel"]
+custom_minimum_size = Vector2(225, 310)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPanel/EquipmentPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/EquipmentPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="EquipIcon" type="TextureRect" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5_32lxx")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Equipment"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EquipValuePanel" type="HBoxContainer" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="MinusButton" type="Button" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="Denom" type="Label" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "£"
+
+[node name="PlusButton" type="Button" parent="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="StaffPayPanel" type="PanelContainer" parent="OptionsPanel"]
+custom_minimum_size = Vector2(225, 310)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPanel/StaffPayPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/StaffPayPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="StaffIcon" type="TextureRect" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_nxf4a")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Staff Pay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaffValuePanel" type="HBoxContainer" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="MinusButton" type="Button" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="Denom" type="Label" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "£"
+
+[node name="PlusButton" type="Button" parent="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel"]
+clip_contents = true
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 813.00006
+offset_top = 310.0
+offset_right = 950.00006
+offset_bottom = 447.0
+scale = Vector2(2.32123, 2.32123)
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Options"
+
+[node name="EndButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Next Day!"
