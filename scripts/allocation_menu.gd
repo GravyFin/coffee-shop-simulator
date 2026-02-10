@@ -13,9 +13,14 @@ var sf_spend := 0
 @onready var eq_amount = $OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel/Denom
 @onready var sf_amount = $OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel/Denom
 
+@onready var coffee_quality_label = $AssetPanel/MarginContainer/GridContainer/QualityLabel
+@onready var popularity_label = $AssetPanel/MarginContainer/GridContainer/PopLabel
+@onready var staff_happiness_label = $AssetPanel/MarginContainer/GridContainer/StaffLabel
+
 func _ready():
 	day_label.text = "Day: %d" % GameManager.day
 	update_ui()
+	update_stats_display()
 
 # === HELPER FUNCTIONS ===
 func remaining_money() -> int:
@@ -61,8 +66,43 @@ func _on_sf_minus_pressed():
 		sf_spend -= STEP
 		update_ui()
 
+# === STAT PRINTS ===
+# === COFFEE QUALITY ===
+func coffee_quality_to_stars(value: int) -> String:
+	if value < 20:
+		return "★☆☆☆☆"
+	elif value < 40:
+		return "★★☆☆☆"
+	elif value < 60:
+		return "★★★☆☆"
+	elif value < 80:
+		return "★★★★☆"
+	else:
+		return "★★★★★"
+
+# === POPULARITY AND HAPPINESS ===
+func value_to_description(value: int) -> String:
+	if value < 20:
+		return "Very low"
+	elif value < 40:
+		return "Low"
+	elif value < 60:
+		return "Okay"
+	elif value < 80:
+		return "High"
+	else:
+		return "Very high"
+
+func update_stats_display():
+	coffee_quality_label.text = coffee_quality_to_stars(GameManager.coffee_quality)
+	popularity_label.text = value_to_description(GameManager.popularity)
+	staff_happiness_label.text = value_to_description(GameManager.staff_happiness)
+
 # === NEXT DAY BUTTON ===
 func _on_end_day_pressed():
+	var total_spend = ad_spend + eq_spend + sf_spend
+	GameManager.money -= total_spend
+	
 	GameManager.advertising_spend = ad_spend
 	GameManager.equipment_spend = eq_spend
 	GameManager.staff_spend = sf_spend

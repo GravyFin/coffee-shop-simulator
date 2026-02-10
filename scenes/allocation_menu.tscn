@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://mr8oynd1ku2h"]
 
-[ext_resource type="Script" uid="uid://idw3rm21lr54" path="res://scenes/allocation_menu.gd" id="1_3urfv"]
+[ext_resource type="Script" uid="uid://idw3rm21lr54" path="res://scripts/allocation_menu.gd" id="1_3urfv"]
 [ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="1_21jpx"]
 [ext_resource type="Texture2D" uid="uid://cmj4qm7awdv85" path="res://assets/fire_icon.png" id="2_vo4r5"]
 [ext_resource type="Texture2D" uid="uid://06oe1fiigjg0" path="res://assets/smile_icon.png" id="3_32lxx"]
@@ -56,7 +56,7 @@ theme_override_constants/margin_bottom = 16
 [node name="Label" type="Label" parent="Day+MoneyPanel/MoneyPanel/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "Money: £10,000"
+text = "Money: £1,000"
 horizontal_alignment = 1
 
 [node name="AssetPanel" type="PanelContainer" parent="."]

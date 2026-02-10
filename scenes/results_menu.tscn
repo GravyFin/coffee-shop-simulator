@@ -1,7 +1,122 @@
-[gd_scene format=3 uid="uid://c4mxurvgljo61"]
+[gd_scene load_steps=2 format=3 uid="uid://c4mxurvgljo61"]
+
+[ext_resource type="Script" uid="uid://v11x2r12o3fw" path="res://scripts/results_menu.gd" id="1_kqyoe"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqyoe")
+
+[node name="ResultsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -311.0
+offset_right = 350.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ResultsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ResultsPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 46
+text = "Day Results"
+horizontal_alignment = 1
+
+[node name="CustomerNo" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You got X customers today!"
+vertical_alignment = 1
+
+[node name="Revenue" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You made £X today!"
+vertical_alignment = 1
+
+[node name="CoffeeQuality" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You coffee this good today!"
+vertical_alignment = 1
+
+[node name="Popularity" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Your shop was this popular today!"
+vertical_alignment = 1
+
+[node name="StaffHappiness" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Your staff were this happy today!"
+vertical_alignment = 1
+
+[node name="Feedback" type="RichTextLabel" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_separation = 4
+theme_override_constants/paragraph_separation = 4
+text = "You did amazing today!
+You did amazing today!
+You did amazing today!"
+fit_content = true
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -489.125
+offset_top = 167.0
+offset_right = 529.125
+offset_bottom = 291.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="SaveExitButton" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Save and Exit"
+
+[node name="NextDayButton" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Next day!"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/NextDayButton" to="." method="_on_next_day_pressed"]
