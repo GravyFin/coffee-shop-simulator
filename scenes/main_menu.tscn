@@ -4,34 +4,80 @@
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-clip_contents = true
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
 offset_right = 536.0
-offset_bottom = 139.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 58
+text = "Coffee Shop 
+Simulator"
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 46
-text = "Coffee Shop Simulator"
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 202.0
+offset_right = 593.0
+offset_bottom = 582.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="StartGameButton" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+clip_contents = true
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/outline_size = 6
+theme_override_constants/separation = 12
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/outline_size = 0
 theme_override_constants/h_separation = 6
 theme_override_constants/icon_max_width = 6
 theme_override_constants/align_to_largest_stylebox = 6
 theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 28
 text = "Start Game!"
 autowrap_mode = 1
 icon_alignment = 1
 script = ExtResource("1_l6cm7")
 
-[connection signal="pressed" from="VBoxContainer/StartGameButton" to="VBoxContainer/StartGameButton" method="_on_pressed"]
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/icon_max_width = 6
+theme_override_constants/align_to_largest_stylebox = 6
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 28
+text = "Options"
+
+[node name="HowToPlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/icon_max_width = 6
+theme_override_constants/align_to_largest_stylebox = 6
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 28
+text = "How to Play"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/icon_max_width = 6
+theme_override_constants/align_to_largest_stylebox = 6
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 28
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="MarginContainer/VBoxContainer/StartGameButton" method="_on_pressed"]

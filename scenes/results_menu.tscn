@@ -84,7 +84,21 @@ You did amazing today!"
 fit_content = true
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="TipTitle" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 24
+text = "Tip from the manager"
+horizontal_alignment = 1
+
+[node name="TipLabel" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 2
+text = "Tip: Do better!"
+horizontal_alignment = 1
+
+[node name="ButtonsPanel" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = -489.125
 offset_top = 167.0
@@ -95,28 +109,28 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonsPanel"]
 layout_mode = 2
 
-[node name="SaveExitButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="SaveExitButton" type="Button" parent="ButtonsPanel/HBoxContainer"]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "Save and Exit"
 
-[node name="NextDayButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="NextDayButton" type="Button" parent="ButtonsPanel/HBoxContainer"]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
 text = "Next day!"
 
-[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="OptionsButton" type="Button" parent="ButtonsPanel/HBoxContainer"]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/NextDayButton" to="." method="_on_next_day_pressed"]
+[connection signal="pressed" from="ButtonsPanel/HBoxContainer/NextDayButton" to="." method="_on_next_day_pressed"]
