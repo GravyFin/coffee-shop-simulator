@@ -327,4 +327,5 @@ text = "Next Day!"
 [connection signal="pressed" from="OptionsPanel/EquipmentPanel/MarginContainer/VBoxContainer/EquipValuePanel/PlusButton" to="." method="_on_eq_plus_pressed"]
 [connection signal="pressed" from="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel/MinusButton" to="." method="_on_sf_minus_pressed"]
 [connection signal="pressed" from="OptionsPanel/StaffPayPanel/MarginContainer/VBoxContainer/StaffValuePanel/PlusButton" to="." method="_on_sf_plus_pressed"]
+[connection signal="pressed" from="Options+EndButtons/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Options+EndButtons/VBoxContainer/EndButton" to="." method="_on_end_day_pressed"]

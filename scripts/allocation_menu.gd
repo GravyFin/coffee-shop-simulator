@@ -108,3 +108,7 @@ func _on_end_day_pressed():
 	GameManager.staff_spend = sf_spend
 	
 	get_tree().change_scene_to_file("res://scenes/results_menu.tscn")
+
+func _on_options_button_pressed():
+	GameManager.previous_scene = "res://scenes/allocation_menu.tscn"
+	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")

@@ -141,3 +141,10 @@ func _on_next_day_pressed():
 		get_tree().change_scene_to_file("res://scenes/final_day_menu.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/allocation_menu.tscn")
+
+func _on_options_button_pressed():
+	GameManager.previous_scene = "res://scenes/results_menu.tscn"
+	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
+
+func _on_save_exit_button_pressed() -> void:
+	get_tree().quit()

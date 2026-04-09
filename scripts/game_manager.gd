@@ -24,3 +24,8 @@ func reset_game():
 	coffee_quality = 50
 	popularity = 50
 	staff_happiness = 50
+
+# === AUDIO SETTINGS ===
+var volume: float = 1.0
+var is_muted: bool = false
+var previous_scene: String = ""

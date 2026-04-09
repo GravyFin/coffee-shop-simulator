@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bqddapol1d7ow"]
 
-[ext_resource type="Script" uid="uid://cn1ukvrx8twye" path="res://scenes/how_to_play.gd" id="1_d4i75"]
+[ext_resource type="Script" uid="uid://cn1ukvrx8twye" path="res://scripts/how_to_play.gd" id="1_d4i75"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -74,9 +74,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -137.0
-offset_top = 126.0
+offset_top = 130.0
 offset_right = 137.0
-offset_bottom = 250.0
+offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 12

@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxkp4ttii0j56"]
+
+[ext_resource type="Script" uid="uid://74kus6p6g001" path="res://scripts/options_menu.gd" id="1_liyum"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_liyum")
+
+[node name="OptionsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -311.0
+offset_right = 350.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="OptionsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Options"
+horizontal_alignment = 1
+
+[node name="VolumeSettings" type="HBoxContainer" parent="OptionsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="OptionsPanel/MarginContainer/VBoxContainer/VolumeSettings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Volume"
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/MarginContainer/VBoxContainer/VolumeSettings"]
+custom_minimum_size = Vector2(250, 25)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="MuteSettings" type="HBoxContainer" parent="OptionsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="OptionsPanel/MarginContainer/VBoxContainer/MuteSettings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Mute"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="OptionsPanel/MarginContainer/VBoxContainer/MuteSettings"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -137.0
+offset_top = 130.0
+offset_right = 137.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="BackButton" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="value_changed" from="OptionsPanel/MarginContainer/VBoxContainer/VolumeSettings/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="OptionsPanel/MarginContainer/VBoxContainer/MuteSettings/CheckBox" to="." method="_on_mute_check_box_toggled"]
+[connection signal="pressed" from="MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -100,10 +100,10 @@ horizontal_alignment = 1
 
 [node name="ButtonsPanel" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -489.125
-offset_top = 167.0
-offset_right = 529.125
-offset_bottom = 291.0
+offset_left = -490.0
+offset_top = 170.0
+offset_right = 528.25
+offset_bottom = 294.00006
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -133,4 +133,6 @@ size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
+[connection signal="pressed" from="ButtonsPanel/HBoxContainer/SaveExitButton" to="." method="_on_save_exit_button_pressed"]
 [connection signal="pressed" from="ButtonsPanel/HBoxContainer/NextDayButton" to="." method="_on_next_day_pressed"]
+[connection signal="pressed" from="ButtonsPanel/HBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
