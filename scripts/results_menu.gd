@@ -104,7 +104,7 @@ func update_feedback():
 	
 	feedback_label.text = "\n".join(messages)
 
-func generate_tip():
+func update_tip():
 	var ad = GameManager.advertising_spend
 	var eq = GameManager.equipment_spend
 	var sf = GameManager.staff_spend
@@ -137,4 +137,7 @@ func generate_tip():
 	tip_label.text = "Great job! Your coffee shop is running really well! Keep up the good work!"
 
 func _on_next_day_pressed():
-	get_tree().change_scene_to_file("res://scenes/allocation_menu.tscn")
+	if GameManager.day > 7:
+		get_tree().change_scene_to_file("res://scenes/final_day_menu.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/allocation_menu.tscn")

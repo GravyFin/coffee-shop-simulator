@@ -46,7 +46,7 @@ theme_override_constants/separation = 4
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 46
-text = "Day Results"
+text = "Today's Results"
 horizontal_alignment = 1
 
 [node name="CustomerNo" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]

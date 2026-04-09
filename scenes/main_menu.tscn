@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4u32pnj4o88y"]
 
-[ext_resource type="Script" uid="uid://deiinuokh5m54" path="res://scripts/start_game_button.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bwrio7jrhl8kc" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l6cm7")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -48,7 +49,6 @@ theme_override_font_sizes/font_size = 28
 text = "Start Game!"
 autowrap_mode = 1
 icon_alignment = 1
-script = ExtResource("1_l6cm7")
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
@@ -80,4 +80,6 @@ theme_override_constants/line_spacing = 6
 theme_override_font_sizes/font_size = 28
 text = "Exit"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="MarginContainer/VBoxContainer/StartGameButton" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_button_pressed"]
