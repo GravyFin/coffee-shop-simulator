@@ -20,11 +20,13 @@ func _on_mute_check_box_toggled(button_pressed):
 
 # === UPDATE AUDIO SETTINGS ===
 func update_audio():
+	var bus_index = AudioServer.get_bus_index("Master")
+	
 	if GameManager.is_muted:
-		AudioServer.set_bus_volume_db(0, -80) # effectively mute
+		AudioServer.set_bus_volume_db(bus_index, -80) # effectively mute
 	else:
 		var db = linear_to_db(GameManager.volume)
-		AudioServer.set_bus_volume_db(0, db)
+		AudioServer.set_bus_volume_db(bus_index, db)
 
 func _on_back_button_pressed():
 	if GameManager.previous_scene != "":

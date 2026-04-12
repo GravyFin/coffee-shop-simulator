@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://mr8oynd1ku2h"]
+[gd_scene load_steps=9 format=3 uid="uid://mr8oynd1ku2h"]
 
 [ext_resource type="Script" uid="uid://idw3rm21lr54" path="res://scripts/allocation_menu.gd" id="1_3urfv"]
 [ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="1_21jpx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://06oe1fiigjg0" path="res://assets/smile_icon.png" id="3_32lxx"]
 [ext_resource type="Texture2D" uid="uid://do8ujuy3t0277" path="res://assets/megaphone_icon.png" id="4_vo4r5"]
 [ext_resource type="Texture2D" uid="uid://bgyk6lpoxsqle" path="res://assets/equipment_icon.png" id="5_32lxx"]
+[ext_resource type="Texture2D" uid="uid://bpwe6mghr2v86" path="res://assets/Info icon.png" id="6_nkip6"]
 [ext_resource type="Texture2D" uid="uid://dwlo5umwnetwj" path="res://assets/staff_icon.png" id="6_nxf4a"]
 
 [node name="Control" type="Control"]
@@ -82,6 +83,9 @@ columns = 2
 [node name="QualityIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
+tooltip_text = "This is your Coffee Quality!
+The higher the quality of your coffee, 
+the more money people will pay for it!"
 texture = ExtResource("1_21jpx")
 expand_mode = 2
 
@@ -93,6 +97,11 @@ text = "4/5"
 [node name="PopIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
+tooltip_text = "This is your shop's Popularity!
+This shows how popular your shop is. 
+Low popularity means not a lot of people
+know about your shop and high 
+popularity means a lot of people do!"
 texture = ExtResource("2_vo4r5")
 expand_mode = 4
 stretch_mode = 5
@@ -105,6 +114,10 @@ text = "Very Popular"
 [node name="StaffIcon" type="TextureRect" parent="AssetPanel/MarginContainer/GridContainer"]
 texture_filter = 1
 layout_mode = 2
+tooltip_text = "This is you Staff Happiness!
+Your staff will become happier if you 
+pay them more, which means they 
+will work harder for you!"
 texture = ExtResource("3_32lxx")
 expand_mode = 2
 
@@ -179,6 +192,28 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 26
 text = "+"
 
+[node name="InfoLayer" type="Control" parent="OptionsPanel/AdvertisingPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InfoIcon" type="TextureRect" parent="OptionsPanel/AdvertisingPanel/InfoLayer"]
+texture_filter = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 25.0
+offset_bottom = 25.0
+scale = Vector2(3.5, 3.5)
+tooltip_text = "This is advertising! 
+It's how people find out about you and 
+your coffee shop! 
+Spending money on advertising means 
+you will hace more customers!"
+texture = ExtResource("6_nkip6")
+expand_mode = 1
+stretch_mode = 3
+
 [node name="EquipmentPanel" type="PanelContainer" parent="OptionsPanel"]
 custom_minimum_size = Vector2(225, 310)
 layout_mode = 2
@@ -236,6 +271,28 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 26
 text = "+"
 
+[node name="InfoLayer" type="Control" parent="OptionsPanel/EquipmentPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InfoIcon" type="TextureRect" parent="OptionsPanel/EquipmentPanel/InfoLayer"]
+texture_filter = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 25.0
+offset_bottom = 25.0
+scale = Vector2(3.5, 3.5)
+tooltip_text = "This is Equipment!
+This is what you use to make your 
+coffee!
+Spending money on equipmetn 
+means your coffee will taste better!"
+texture = ExtResource("6_nkip6")
+expand_mode = 1
+stretch_mode = 3
+
 [node name="StaffPayPanel" type="PanelContainer" parent="OptionsPanel"]
 custom_minimum_size = Vector2(225, 310)
 layout_mode = 2
@@ -292,6 +349,27 @@ size_flags_horizontal = 10
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 26
 text = "+"
+
+[node name="InfoLayer" type="Control" parent="OptionsPanel/StaffPayPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InfoIcon" type="TextureRect" parent="OptionsPanel/StaffPayPanel/InfoLayer"]
+texture_filter = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 25.0
+offset_bottom = 25.0
+scale = Vector2(3.5, 3.5)
+tooltip_text = "This is Staff Pay!
+This is what makes you staff work hard!
+Spending money of staff pay makes 
+your staff happier and harder workers!"
+texture = ExtResource("6_nkip6")
+expand_mode = 1
+stretch_mode = 3
 
 [node name="Options+EndButtons" type="MarginContainer" parent="."]
 layout_mode = 0

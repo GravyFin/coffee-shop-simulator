@@ -26,6 +26,6 @@ func reset_game():
 	staff_happiness = 50
 
 # === AUDIO SETTINGS ===
-var volume: float = 1.0
+var volume: float = 0.1
 var is_muted: bool = false
 var previous_scene: String = ""
