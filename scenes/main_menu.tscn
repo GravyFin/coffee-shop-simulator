@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4u32pnj4o88y"]
+[gd_scene load_steps=7 format=3 uid="uid://b4u32pnj4o88y"]
 
 [ext_resource type="Script" uid="uid://bwrio7jrhl8kc" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://bwyojt2wg37mo" path="res://assets/Coffee icon.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://bvsu6gmwo6a3c" path="res://assets/Money icon.png" id="4_oa1go"]
+[ext_resource type="FontFile" uid="uid://1eax8osn1cgm" path="res://fonts/chalk_text_1.ttf" id="5_tbmy8"]
+[ext_resource type="FontFile" uid="uid://dte6w3oakbrqr" path="res://fonts/chalk_text_2.ttf" id="6_rtw2f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,15 +16,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
-[node name="Label" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9607843, 0.9019608, 0.827451, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 536.0
-offset_bottom = 104.0
-theme_override_font_sizes/font_size = 58
-text = "Coffee Shop 
-Simulator"
+offset_left = 698.00006
+offset_top = 177.00002
+offset_right = 962.00006
+offset_bottom = 589.09753
+rotation = 0.073964864
+texture = ExtResource("2_8ln24")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 895.00006
+offset_top = 313.00006
+offset_right = 1015.00006
+offset_bottom = 433.00006
+rotation = -0.16262919
+texture = ExtResource("3_rtw2f")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 929.00006
+offset_top = 406.00006
+offset_right = 1109.0
+offset_bottom = 586.00006
+rotation = 0.18313248
+texture = ExtResource("4_oa1go")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.0
+offset_top = -292.0
+offset_right = 546.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23137255, 0.18431373, 0.18431373, 1)
+theme_override_fonts/font = ExtResource("5_tbmy8")
+theme_override_font_sizes/font_size = 128
+text = "My First Coffee Shop"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -45,7 +97,8 @@ theme_override_constants/h_separation = 6
 theme_override_constants/icon_max_width = 6
 theme_override_constants/align_to_largest_stylebox = 6
 theme_override_constants/line_spacing = 6
-theme_override_font_sizes/font_size = 28
+theme_override_fonts/font = ExtResource("6_rtw2f")
+theme_override_font_sizes/font_size = 30
 text = "Start Game!"
 autowrap_mode = 1
 icon_alignment = 1
@@ -57,6 +110,7 @@ theme_override_constants/h_separation = 6
 theme_override_constants/icon_max_width = 6
 theme_override_constants/align_to_largest_stylebox = 6
 theme_override_constants/line_spacing = 6
+theme_override_fonts/font = ExtResource("6_rtw2f")
 theme_override_font_sizes/font_size = 28
 text = "Options"
 
@@ -67,7 +121,8 @@ theme_override_constants/h_separation = 6
 theme_override_constants/icon_max_width = 6
 theme_override_constants/align_to_largest_stylebox = 6
 theme_override_constants/line_spacing = 6
-theme_override_font_sizes/font_size = 28
+theme_override_fonts/font = ExtResource("6_rtw2f")
+theme_override_font_sizes/font_size = 30
 text = "How to Play"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -77,7 +132,8 @@ theme_override_constants/h_separation = 6
 theme_override_constants/icon_max_width = 6
 theme_override_constants/align_to_largest_stylebox = 6
 theme_override_constants/line_spacing = 6
-theme_override_font_sizes/font_size = 28
+theme_override_fonts/font = ExtResource("6_rtw2f")
+theme_override_font_sizes/font_size = 30
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]

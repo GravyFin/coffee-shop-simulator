@@ -1,21 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4mxurvgljo61"]
+[gd_scene load_steps=6 format=3 uid="uid://c4mxurvgljo61"]
 
 [ext_resource type="Script" uid="uid://v11x2r12o3fw" path="res://scripts/results_menu.gd" id="1_kqyoe"]
+[ext_resource type="Texture2D" uid="uid://daltaoqvr4cvd" path="res://assets/Chalk board GC.png" id="2_mpbci"]
+[ext_resource type="FontFile" uid="uid://cb467a2b4wp2i" path="res://fonts/chalk_text_3.ttf" id="2_uxv0o"]
+[ext_resource type="FontFile" uid="uid://dte6w3oakbrqr" path="res://fonts/chalk_text_2.ttf" id="3_mpbci"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dor4"]
+texture = ExtResource("2_mpbci")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+expand_margin_left = 12.0
+expand_margin_top = 12.0
+expand_margin_right = 12.0
+expand_margin_bottom = 12.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kqyoe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9607843, 0.9019608, 0.827451, 1)
 
 [node name="ResultsPanel" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -25,11 +42,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -350.0
-offset_top = -311.0
+offset_top = -299.0
 offset_right = 350.0
-offset_bottom = 108.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4dor4")
 
 [node name="MarginContainer" type="MarginContainer" parent="ResultsPanel"]
 layout_mode = 2
@@ -45,32 +63,38 @@ theme_override_constants/separation = 4
 [node name="Title" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_uxv0o")
 theme_override_font_sizes/font_size = 46
 text = "Today's Results"
 horizontal_alignment = 1
 
 [node name="CustomerNo" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "You got X customers today!"
 vertical_alignment = 1
 
 [node name="Revenue" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "You made £X today!"
 vertical_alignment = 1
 
 [node name="CoffeeQuality" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "You coffee this good today!"
 vertical_alignment = 1
 
 [node name="Popularity" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "Your shop was this popular today!"
 vertical_alignment = 1
 
 [node name="StaffHappiness" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "Your staff were this happy today!"
 vertical_alignment = 1
 
@@ -78,6 +102,7 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_constants/line_separation = 4
 theme_override_constants/paragraph_separation = 4
+theme_override_fonts/normal_font = ExtResource("2_uxv0o")
 text = "You did amazing today!
 You did amazing today!
 You did amazing today!"
@@ -87,6 +112,7 @@ vertical_alignment = 1
 [node name="TipTitle" type="Label" parent="ResultsPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_uxv0o")
 theme_override_font_sizes/font_size = 24
 text = "Tip from the manager"
 horizontal_alignment = 1
@@ -95,15 +121,23 @@ horizontal_alignment = 1
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("2_uxv0o")
 text = "Tip: Do better!"
 horizontal_alignment = 1
 
 [node name="ButtonsPanel" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = -490.0
-offset_top = 170.0
-offset_right = 528.25
-offset_bottom = 294.00006
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -497.0
+offset_top = -171.0
+offset_right = 521.25
+offset_bottom = -46.99994
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -116,6 +150,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_mpbci")
 theme_override_font_sizes/font_size = 30
 text = "Save and Exit"
 
@@ -123,6 +158,7 @@ text = "Save and Exit"
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_mpbci")
 theme_override_font_sizes/font_size = 30
 text = "Next day!"
 
@@ -130,6 +166,7 @@ text = "Next day!"
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("3_mpbci")
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
