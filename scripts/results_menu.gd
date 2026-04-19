@@ -137,14 +137,17 @@ func update_tip():
 	tip_label.text = "Great job! Your coffee shop is running really well! Keep up the good work!"
 
 func _on_next_day_pressed():
+	MusicPlayer.play_high()
 	if GameManager.day > 7:
 		get_tree().change_scene_to_file("res://scenes/final_day_menu.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/allocation_menu.tscn")
 
 func _on_options_button_pressed():
+	MusicPlayer.play_high()
 	GameManager.previous_scene = "res://scenes/results_menu.tscn"
 	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
 
-func _on_save_exit_button_pressed() -> void:
+func _on_save_exit_button_pressed():
+	MusicPlayer.play_low()
 	get_tree().quit()

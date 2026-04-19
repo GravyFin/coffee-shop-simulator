@@ -26,6 +26,15 @@ func reset_game():
 	staff_happiness = 50
 
 # === AUDIO SETTINGS ===
-var volume: float = 0.1
+var volume: float = 0.2
 var is_muted: bool = false
 var previous_scene: String = ""
+
+func apply_audio_settings():
+	var bus_index = AudioServer.get_bus_index("Master")
+	
+	if is_muted:
+		AudioServer.set_bus_volume_db(bus_index, -80)
+	else:
+		var db = linear_to_db(volume)
+		AudioServer.set_bus_volume_db(bus_index, db)

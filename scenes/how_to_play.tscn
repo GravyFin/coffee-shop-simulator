@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqddapol1d7ow"]
+[gd_scene load_steps=15 format=3 uid="uid://bqddapol1d7ow"]
 
 [ext_resource type="Script" uid="uid://cn1ukvrx8twye" path="res://scripts/how_to_play.gd" id="1_d4i75"]
 [ext_resource type="Texture2D" uid="uid://daltaoqvr4cvd" path="res://assets/Chalk board GC.png" id="2_xkrkv"]
 [ext_resource type="FontFile" uid="uid://cb467a2b4wp2i" path="res://fonts/chalk_text_3.ttf" id="3_wi5qh"]
 [ext_resource type="FontFile" uid="uid://dte6w3oakbrqr" path="res://fonts/chalk_text_2.ttf" id="4_e0xnd"]
+[ext_resource type="Texture2D" uid="uid://bdk1xfbwaa8b" path="res://assets/Question mark.png" id="5_dhu30"]
+[ext_resource type="Texture2D" uid="uid://byv5h3eeh28cx" path="res://assets/Coffee icon 3.png" id="6_nxcge"]
+[ext_resource type="Texture2D" uid="uid://coheq2tkos315" path="res://assets/Coffee icon 5.png" id="7_esfgi"]
+[ext_resource type="Texture2D" uid="uid://cmj4qm7awdv85" path="res://assets/fire_icon.png" id="8_t2x12"]
+[ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="9_oityv"]
+[ext_resource type="Texture2D" uid="uid://635wd7hxcrpp" path="res://assets/Donut icon 3.png" id="10_3cyrb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8x0n"]
 texture = ExtResource("2_xkrkv")
@@ -15,6 +21,42 @@ expand_margin_left = 12.0
 expand_margin_top = 12.0
 expand_margin_right = 12.0
 expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkrkv"]
+bg_color = Color(0.6509804, 0.48235294, 0.29411766, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wi5qh"]
+bg_color = Color(0.4738877, 0.34755984, 0.20654273, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0xnd"]
+bg_color = Color(0.88737077, 0.6622801, 0.41101614, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -109,6 +151,92 @@ custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_e0xnd")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkrkv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wi5qh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0xnd")
 text = "Back"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 63.999996
+offset_right = 152.14502
+offset_bottom = 269.03204
+rotation = -0.2617994
+scale = Vector2(1.02748, 1.02748)
+texture = ExtResource("5_dhu30")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1003.00006
+offset_top = 25.000015
+offset_right = 1131.145
+offset_bottom = 230.03206
+rotation = 0.2617994
+scale = Vector2(1.02748, 1.02748)
+texture = ExtResource("5_dhu30")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.000004
+offset_top = 286.0
+offset_right = 88.29941
+offset_bottom = 372.18588
+rotation = 0.07738707
+scale = Vector2(3.5903592, 3.5903592)
+texture = ExtResource("6_nxcge")
+expand_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 965.0
+offset_top = 410.0
+offset_right = 1005.0
+offset_bottom = 455.7143
+rotation = 0.14799345
+scale = Vector2(4.14205, 4.14205)
+texture = ExtResource("7_esfgi")
+expand_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1022.99994
+offset_top = 245.0
+offset_right = 1063.8171
+offset_bottom = 300.98196
+rotation = 0.20650914
+scale = Vector2(2.3182886, 2.3182886)
+texture = ExtResource("8_t2x12")
+expand_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 271.0
+offset_top = 500.0
+offset_right = 311.0
+offset_bottom = 540.0
+rotation = 0.053831663
+scale = Vector2(2.8721805, 2.8721805)
+texture = ExtResource("9_oityv")
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 750.0
+offset_top = 525.0
+offset_right = 801.11115
+offset_bottom = 565.0
+rotation = -0.15618384
+scale = Vector2(2.8721805, 2.8721805)
+texture = ExtResource("10_3cyrb")
+expand_mode = 3
 
 [connection signal="pressed" from="MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

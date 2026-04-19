@@ -3,7 +3,7 @@ extends Control
 @onready var volume_slider = $OptionsPanel/MarginContainer/VBoxContainer/VolumeSettings/VolumeSlider
 @onready var mute_checkbox = $OptionsPanel/MarginContainer/VBoxContainer/MuteSettings/CheckBox
 
-func _readu():
+func _ready():
 	# load saves values
 	volume_slider.value = GameManager.volume
 	mute_checkbox.button_pressed = GameManager.is_muted
@@ -29,6 +29,7 @@ func update_audio():
 		AudioServer.set_bus_volume_db(bus_index, db)
 
 func _on_back_button_pressed():
+	MusicPlayer.play_low()
 	if GameManager.previous_scene != "":
 		get_tree().change_scene_to_file(GameManager.previous_scene)
 	else:

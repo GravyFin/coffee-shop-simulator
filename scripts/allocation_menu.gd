@@ -38,33 +38,39 @@ func _on_ad_plus_pressed():
 	if remaining_money() >= STEP:
 		ad_spend += STEP
 		update_ui()
+		MusicPlayer.play_high()
 
 func _on_ad_minus_pressed():
 	if ad_spend >= STEP:
 		ad_spend -= STEP
 		update_ui()
+		MusicPlayer.play_low()
 
 # === EQUIPMENT BUTTONS ===
 func _on_eq_plus_pressed():
 	if remaining_money() >= STEP:
 		eq_spend += STEP
 		update_ui()
+		MusicPlayer.play_high()
 
 func _on_eq_minus_pressed():
 	if eq_spend >= STEP:
 		eq_spend -= STEP
 		update_ui()
+		MusicPlayer.play_low()
 
 # === STAFF BUTTONS ===
 func _on_sf_plus_pressed():
 	if remaining_money() >= STEP:
 		sf_spend += STEP
 		update_ui()
+		MusicPlayer.play_high()
 
 func _on_sf_minus_pressed():
 	if sf_spend >= STEP:
 		sf_spend -= STEP
 		update_ui()
+		MusicPlayer.play_low()
 
 # === STAT PRINTS ===
 # === COFFEE QUALITY ===
@@ -100,6 +106,7 @@ func update_stats_display():
 
 # === NEXT DAY BUTTON ===
 func _on_end_day_pressed():
+	MusicPlayer.play_high()
 	var total_spend = ad_spend + eq_spend + sf_spend
 	GameManager.money -= total_spend
 	
@@ -110,5 +117,6 @@ func _on_end_day_pressed():
 	get_tree().change_scene_to_file("res://scenes/results_menu.tscn")
 
 func _on_options_button_pressed():
+	MusicPlayer.play_high()
 	GameManager.previous_scene = "res://scenes/allocation_menu.tscn"
 	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")

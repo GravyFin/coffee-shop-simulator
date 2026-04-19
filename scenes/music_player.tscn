@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg6vn8wtcckll"]
+[gd_scene load_steps=5 format=3 uid="uid://bg6vn8wtcckll"]
 
 [ext_resource type="Script" uid="uid://w570paacg5rw" path="res://scripts/music.gd" id="1_ql6qh"]
+[ext_resource type="AudioStream" uid="uid://pgtxbnhq682y" path="res://audio/The-Ice-Cream-Man.mp3" id="2_ql6qh"]
+[ext_resource type="AudioStream" uid="uid://chyj7wlux26ep" path="res://audio/button1.mp3" id="3_yalyj"]
+[ext_resource type="AudioStream" uid="uid://d76sskv81ywm" path="res://audio/button2.mp3" id="4_io3i6"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ql6qh")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ql6qh")
 autoplay = true
+
+[node name="SFX_High" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yalyj")
+
+[node name="SFX_Low" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_io3i6")

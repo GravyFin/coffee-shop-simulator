@@ -1,9 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsu7vvovscb3k"]
+[gd_scene load_steps=16 format=3 uid="uid://bsu7vvovscb3k"]
 
 [ext_resource type="Script" uid="uid://bdddtaakmo8s4" path="res://scripts/final_day_menu.gd" id="1_e8b6k"]
 [ext_resource type="Texture2D" uid="uid://daltaoqvr4cvd" path="res://assets/Chalk board GC.png" id="2_7jo3c"]
 [ext_resource type="FontFile" uid="uid://cb467a2b4wp2i" path="res://fonts/chalk_text_3.ttf" id="3_dcyen"]
 [ext_resource type="FontFile" uid="uid://dte6w3oakbrqr" path="res://fonts/chalk_text_2.ttf" id="4_1mu0d"]
+[ext_resource type="Texture2D" uid="uid://t4u43pw2kjit" path="res://assets/Coffee icon 2.png" id="5_si81s"]
+[ext_resource type="Texture2D" uid="uid://635wd7hxcrpp" path="res://assets/Donut icon 3.png" id="6_d8s0r"]
+[ext_resource type="Texture2D" uid="uid://bqqqvj1onbev3" path="res://assets/star_icon.png" id="7_5aymr"]
+[ext_resource type="Texture2D" uid="uid://df7hvda20lrg2" path="res://assets/Coffee icon 6.png" id="8_mftfr"]
+[ext_resource type="Texture2D" uid="uid://coheq2tkos315" path="res://assets/Coffee icon 5.png" id="9_esf0e"]
+[ext_resource type="Texture2D" uid="uid://bnf1vj6bcodf8" path="res://assets/Donut icon.png" id="10_aersr"]
+[ext_resource type="Texture2D" uid="uid://co8wpmn8d7g6x" path="res://assets/Cupcake icon.png" id="11_aubyi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1vrl"]
 texture = ExtResource("2_7jo3c")
@@ -15,6 +22,42 @@ expand_margin_left = 12.0
 expand_margin_top = 12.0
 expand_margin_right = 12.0
 expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jo3c"]
+bg_color = Color(0.6509804, 0.48235294, 0.29411766, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcyen"]
+bg_color = Color(0.4738877, 0.34755984, 0.20654273, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mu0d"]
+bg_color = Color(0.88737077, 0.6622801, 0.41101614, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -99,17 +142,17 @@ horizontal_alignment = 1
 
 [node name="ButtonPanel" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -137.0
-offset_top = 153.0
+offset_top = -168.0
 offset_right = 137.0
-offset_bottom = 277.0
+offset_bottom = -44.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -120,6 +163,91 @@ custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_1mu0d")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jo3c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dcyen")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1mu0d")
 text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 912.0
+offset_top = 393.0
+offset_right = 975.09656
+offset_bottom = 452.00815
+rotation = 0.08454817
+scale = Vector2(3.7878478, 3.7878478)
+texture = ExtResource("5_si81s")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 219.0
+offset_top = 474.0
+offset_right = 270.1111
+offset_bottom = 514.0
+rotation = -0.024835331
+scale = Vector2(3.7878478, 3.7878478)
+texture = ExtResource("6_d8s0r")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 744.0
+offset_top = 484.0
+offset_right = 864.0
+offset_bottom = 604.0
+rotation = -0.110247366
+texture = ExtResource("7_5aymr")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 21.000002
+offset_top = 347.00003
+offset_right = 194.0
+offset_bottom = 597.0
+rotation = -0.05306444
+texture = ExtResource("8_mftfr")
+expand_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 29.0
+offset_top = 76.0
+offset_right = 69.0
+offset_bottom = 121.714294
+rotation = 0.05350676
+scale = Vector2(4.2827907, 4.2827907)
+texture = ExtResource("9_esf0e")
+expand_mode = 5
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 942.0
+offset_top = 27.000061
+offset_right = 993.1111
+offset_bottom = 67.00006
+rotation = -0.06677592
+scale = Vector2(3.818426, 3.818426)
+texture = ExtResource("10_aersr")
+expand_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 999.0
+offset_top = 202.99998
+offset_right = 1039.0
+offset_bottom = 260.14285
+rotation = 0.06677509
+scale = Vector2(3.0384603, 3.0384603)
+texture = ExtResource("11_aubyi")
+expand_mode = 5
 
 [connection signal="pressed" from="ButtonPanel/ExitButton" to="." method="_on_exit_button_pressed"]
