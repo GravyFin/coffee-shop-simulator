@@ -171,55 +171,57 @@ text = "Exit"
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 912.0
-offset_top = 393.0
-offset_right = 975.09656
-offset_bottom = 452.00815
+offset_left = 979.0
+offset_top = 432.0
+offset_right = 1042.0966
+offset_bottom = 491.00815
 rotation = 0.08454817
-scale = Vector2(3.7878478, 3.7878478)
+scale = Vector2(4.119532, 4.119532)
 texture = ExtResource("5_si81s")
 expand_mode = 3
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 219.0
-offset_top = 474.0
-offset_right = 270.1111
-offset_bottom = 514.0
+offset_left = 249.0
+offset_top = 505.59372
+offset_right = 300.1111
+offset_bottom = 545.59375
 rotation = -0.024835331
-scale = Vector2(3.7878478, 3.7878478)
+scale = Vector2(4.373172, 4.373172)
 texture = ExtResource("6_d8s0r")
 expand_mode = 3
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 744.0
-offset_top = 484.0
-offset_right = 864.0
-offset_bottom = 604.0
+offset_left = 811.0
+offset_top = 523.0
+offset_right = 931.0
+offset_bottom = 643.0
 rotation = -0.110247366
+scale = Vector2(1.0875654, 1.0875654)
 texture = ExtResource("7_5aymr")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 21.000002
-offset_top = 347.00003
-offset_right = 194.0
-offset_bottom = 597.0
+offset_left = 16.0
+offset_top = 329.0
+offset_right = 218.18385
+offset_bottom = 621.5425
 rotation = -0.05306444
+scale = Vector2(1.1545264, 1.1545264)
 texture = ExtResource("8_mftfr")
 expand_mode = 5
 
 [node name="TextureRect5" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 29.0
-offset_top = 76.0
-offset_right = 69.0
-offset_bottom = 121.714294
+offset_left = 50.0
+offset_top = 39.0
+offset_right = 94.29171
+offset_bottom = 94.5495
 rotation = 0.05350676
 scale = Vector2(4.2827907, 4.2827907)
 texture = ExtResource("9_esf0e")
@@ -229,24 +231,24 @@ flip_h = true
 [node name="TextureRect6" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 942.0
-offset_top = 27.000061
-offset_right = 993.1111
-offset_bottom = 67.00006
+offset_left = 1021.0
+offset_top = 45.022568
+offset_right = 1072.1111
+offset_bottom = 85.02257
 rotation = -0.06677592
-scale = Vector2(3.818426, 3.818426)
+scale = Vector2(4.466666, 4.466666)
 texture = ExtResource("10_aersr")
 expand_mode = 3
 
 [node name="TextureRect7" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 999.0
-offset_top = 202.99998
-offset_right = 1039.0
-offset_bottom = 260.14285
+offset_left = 1078.0
+offset_top = 221.02249
+offset_right = 1118.0
+offset_bottom = 278.16534
 rotation = 0.06677509
-scale = Vector2(3.0384603, 3.0384603)
+scale = Vector2(3.5542889, 3.5542889)
 texture = ExtResource("11_aubyi")
 expand_mode = 5
 

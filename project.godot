@@ -20,6 +20,20 @@ config/icon="res://icon.svg"
 GameManager="*res://scripts/game_manager.gd"
 MusicPlayer="*res://scenes/music_player.tscn"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [gui]
 
 timers/tooltip_delay_sec=0.2
+
+[rendering]
+
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
+2d/stretch/mode="canvas_items"
+2d/size/viewport_height=720
+2d/size/viewport_width=1280

@@ -89,58 +89,58 @@ color = Color(0.9607843, 0.9019608, 0.827451, 1)
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 698.00006
-offset_top = 177.00002
-offset_right = 962.00006
-offset_bottom = 589.09753
+offset_left = 773.45294
+offset_top = 221.4296
+offset_right = 1037.4529
+offset_bottom = 633.5271
 rotation = 0.073964864
+scale = Vector2(1.093444, 1.0542761)
 texture = ExtResource("2_8ln24")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 924.00006
-offset_top = 192.0
-offset_right = 1044.0
-offset_bottom = 312.0
+offset_left = 1036.0001
+offset_top = 231.99997
+offset_right = 1156.0
+offset_bottom = 351.99994
 rotation = -0.16262919
+scale = Vector2(1.093444, 1.0542761)
 texture = ExtResource("3_rtw2f")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 892.00006
-offset_top = 263.00003
-offset_right = 1072.0
-offset_bottom = 443.00003
+offset_left = 990.0
+offset_top = 307.00003
+offset_right = 1170.0
+offset_bottom = 487.00003
 rotation = 0.18313248
+scale = Vector2(1.093444, 1.0542761)
 texture = ExtResource("4_oa1go")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 915.00006
-offset_top = 443.00006
-offset_right = 956.60004
-offset_bottom = 483.00006
+offset_left = 984.00006
+offset_top = 504.0
+offset_right = 1035.7935
+offset_bottom = 548.6095
 rotation = -0.12956189
-scale = Vector2(4.2999444, 4.2999444)
+scale = Vector2(4.7017484, 4.5333295)
 texture = ExtResource("5_oa1go")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -536.0
-offset_top = -292.0
-offset_right = 546.0
-offset_bottom = -124.0
+offset_left = -541.0
+offset_top = 34.0
+offset_right = 541.0
+offset_bottom = 202.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_color = Color(0.23137255, 0.18431373, 0.18431373, 1)
 theme_override_fonts/font = ExtResource("5_tbmy8")
 theme_override_font_sizes/font_size = 128
@@ -152,6 +152,7 @@ offset_left = 40.0
 offset_top = 202.0
 offset_right = 593.0
 offset_bottom = 582.0
+scale = Vector2(1.2705173, 1.2705173)
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12

@@ -137,9 +137,10 @@ color = Color(0.9607843, 0.9019608, 0.827451, 1)
 [node name="Day+MoneyPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 40.0
+offset_top = 22.0
 offset_right = 302.0
-offset_bottom = 189.0
+offset_bottom = 220.0
+scale = Vector2(1.3030491, 1.3030491)
 theme_override_constants/separation = 10
 
 [node name="DayPanel" type="PanelContainer" parent="Day+MoneyPanel"]
@@ -180,10 +181,11 @@ horizontal_alignment = 1
 
 [node name="AssetPanel" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 835.0
-offset_top = 40.0
-offset_right = 1111.0
-offset_bottom = 230.0
+offset_left = 869.99994
+offset_top = 15.000002
+offset_right = 1146.0
+offset_bottom = 219.0
+scale = Vector2(1.4320198, 1.4320198)
 theme_override_styles/panel = SubResource("StyleBoxFlat_172ac")
 
 [node name="MarginContainer" type="MarginContainer" parent="AssetPanel"]
@@ -249,10 +251,11 @@ text = "Very Happy"
 
 [node name="OptionsPanel" type="GridContainer" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 294.0
+offset_left = 38.000004
+offset_top = 320.0
 offset_right = 773.0
-offset_bottom = 604.0
+offset_bottom = 649.0
+scale = Vector2(1.1627467, 1.1627467)
 theme_override_constants/h_separation = 30
 columns = 3
 
@@ -510,10 +513,10 @@ stretch_mode = 3
 
 [node name="Options+EndButtons" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 813.00006
-offset_top = 310.0
-offset_right = 950.00006
-offset_bottom = 447.0
+offset_left = 928.0
+offset_top = 331.0
+offset_right = 1065.0
+offset_bottom = 468.0
 scale = Vector2(2.32123, 2.32123)
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 6

@@ -173,9 +173,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -509.125
-offset_top = 153.0
+offset_top = 180.0
 offset_right = 509.125
-offset_bottom = 277.00006
+offset_bottom = 304.00006
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 12
@@ -222,10 +222,10 @@ text = "Options"
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 35.0
-offset_top = 205.99998
-offset_right = 181.0
-offset_bottom = 457.44446
+offset_left = 48.999996
+offset_top = 210.0
+offset_right = 233.30502
+offset_bottom = 527.4142
 rotation = -0.0546092
 texture = ExtResource("5_e1ab3")
 expand_mode = 5
@@ -233,32 +233,34 @@ expand_mode = 5
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 955.0
-offset_top = 24.999992
-offset_right = 1117.0
-offset_bottom = 256.4286
-rotation = -0.052297473
+offset_left = 1047.0
+offset_top = 26.999996
+offset_right = 1209.0
+offset_bottom = 258.4286
+rotation = -0.06641011
+scale = Vector2(1.1380751, 1.1380751)
 texture = ExtResource("6_a6buk")
 expand_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 29.0
-offset_top = 37.0
-offset_right = 206.0
-offset_bottom = 170.27448
+offset_left = 39.0
+offset_top = 15.0
+offset_right = 250.96364
+offset_bottom = 174.6008
 rotation = 0.10233924
 texture = ExtResource("7_umjx3")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 974.0
-offset_top = 274.00003
-offset_right = 1152.0
-offset_bottom = 452.00003
-rotation = 0.14523119
+offset_left = 1059.9999
+offset_top = 298.0
+offset_right = 1237.9999
+offset_bottom = 476.0
+rotation = 0.13111855
+scale = Vector2(1.1380751, 1.1380751)
 texture = ExtResource("8_5bpgj")
 
 [connection signal="pressed" from="ButtonsPanel/HBoxContainer/SaveExitButton" to="." method="_on_save_exit_button_pressed"]
